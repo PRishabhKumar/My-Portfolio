@@ -1,0 +1,663 @@
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+/* Live, hand-built artifacts. The palette stays tactile: ceramic, chrome, sage, brass. */
+.artifact-shell {
+  position: relative;
+}
+.artifact-viewport {
+  position: relative;
+  isolation: isolate;
+  touch-action: pan-y;
+  outline-offset: -4px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.artifact-viewport:focus-visible {
+  outline: 2px solid #9fbd74;
+  border-radius: 8px;
+}
+.artifact-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.artifact-viewport[data-dragging="true"] {
+  outline-color: #cbdaa9;
+}
+.artifact-controls {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  position: relative;
+  z-index: 3;
+}
+.artifact-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #415032;
+  background: #f1f2e9cc;
+  border: 1px solid #b9c6a6;
+  font-family: var(--font-mono);
+  transition:
+    background 0.25s,
+    color 0.25s,
+    border-color 0.25s,
+    box-shadow 0.25s;
+}
+.artifact-controls button:hover {
+  background: #dce6c8;
+  border-color: #8eaa6a;
+}
+.artifact-controls button:disabled {
+  opacity: 0.42;
+}
+.artifact-icon-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 0;
+  flex-shrink: 0;
+}
+.artifact-action {
+  min-width: 88px;
+  height: 32px;
+  border-radius: 20px;
+  padding: 0 12px;
+  font-size: 8px;
+}
+.artifact-action[aria-pressed="true"] {
+  background: #cedfb3;
+}
+.hero-art-live {
+  height: 510px;
+  width: calc(100% + 56px);
+  margin-left: -34px;
+}
+.hero-artifact {
+  width: 100%;
+  height: 100%;
+}
+.hero-viewport {
+  position: absolute;
+  inset: 0 0 52px;
+  z-index: 1;
+}
+.hero-artifact-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  transition:
+    opacity 0.7s,
+    visibility 0.7s;
+}
+.hero-artifact-fallback img {
+  position: absolute;
+  width: 116%;
+  max-width: none;
+  height: auto;
+  mask-image: radial-gradient(
+    ellipse 66% 75% at 50% 50%,
+    #000 42%,
+    transparent 78%
+  );
+}
+.artifact-fallback-day {
+  mix-blend-mode: multiply;
+}
+.artifact-fallback-night {
+  opacity: 0;
+  mix-blend-mode: lighten;
+}
+.hero-artifact[data-status="ready"] .hero-artifact-fallback {
+  opacity: 0;
+  visibility: hidden;
+}
+.hero-artifact .artifact-controls {
+  position: absolute;
+  bottom: 15px;
+  left: 50px;
+}
+.hero-artifact-caption {
+  position: absolute;
+  bottom: 65px;
+  left: 50px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  pointer-events: none;
+  color: #5d6e4c;
+}
+.artifact-edition {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+.artifact-gesture {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.35px;
+}
+.hero-art-live .art-topnote {
+  right: 18px;
+  z-index: 4;
+}
+.hero-art-live .art-cross {
+  pointer-events: none;
+  z-index: 2;
+}
+.hero-art-live .cross-one {
+  left: 30px;
+  top: 68px;
+}
+.hero-art-live .cross-two {
+  right: 5px;
+  bottom: 138px;
+}
+.hero-art-live .orbit-stamp {
+  transform: none;
+  z-index: 3;
+  bottom: 15px;
+  right: 12px;
+  border: 0;
+  padding: 0;
+  transition:
+    background 0.3s,
+    box-shadow 0.3s;
+}
+.hero-art-live .orbit-stamp:hover {
+  background: #c6df9d;
+  box-shadow: 0 4px 25px #819e5125;
+}
+.hero-art-live .orbit-stamp:active {
+  scale: 0.98;
+}
+html[data-theme="dark"] .artifact-fallback-day {
+  opacity: 0;
+}
+html[data-theme="dark"] .artifact-fallback-night {
+  opacity: 1;
+}
+html[data-theme="dark"] .hero-artifact-caption {
+  color: #a5b697;
+}
+html[data-theme="dark"] .hero-artifact .artifact-controls button {
+  color: #cbdcba;
+  background: #222e1dcc;
+  border-color: #5c704b;
+}
+html[data-theme="dark"] .hero-artifact .artifact-controls button:hover {
+  background: #354a29;
+  border-color: #9bb97b;
+}
+html[data-theme="dark"] .hero-artifact .artifact-action[aria-pressed="true"] {
+  color: #203018;
+  background: #bdcfa5;
+}
+
+/* The stack is a functional interface: physical modules and DOM cards stay in sync. */
+.stack-playground {
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(265px, 0.9fr);
+  min-height: 346px;
+  border: 1px solid #46573a;
+  border-radius: 10px;
+  background: #1c2719;
+  overflow: clip;
+  margin: 0 0 16px;
+}
+.stack-stage {
+  min-width: 0;
+  min-height: 346px;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 58%, #46563733, transparent 68%);
+}
+.stack-stage-top {
+  position: absolute;
+  top: 19px;
+  left: 22px;
+  right: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 1.1px;
+  color: #a8b99a;
+  z-index: 2;
+  pointer-events: none;
+}
+.stack-live {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 6.5px;
+}
+.stack-live > i {
+  height: 4px;
+  width: 4px;
+  background: #b2ca8f;
+  border-radius: 50%;
+}
+.stack-blueprint {
+  position: absolute;
+  left: 10%;
+  top: 5%;
+  width: 80%;
+  height: 100%;
+  opacity: 0.5;
+  pointer-events: none;
+  background-image:
+    linear-gradient(#879d5d13 1px, transparent 1px),
+    linear-gradient(90deg, #879d5d13 1px, transparent 1px);
+  background-size: 34px 34px;
+  transform: perspective(650px) rotateX(58deg) scale(1.12);
+  mask-image: radial-gradient(ellipse, #000 12%, transparent 66%);
+}
+.stack-blueprint::after {
+  content: "";
+  position: absolute;
+  width: 53%;
+  aspect-ratio: 1;
+  border: 1px solid #809d4527;
+  border-radius: 50%;
+  top: 11%;
+  left: 25%;
+  box-shadow:
+    0 0 0 32px #809d4506,
+    0 0 0 64px #809d4504;
+}
+.stack-viewport {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.stack-drag-hint {
+  position: absolute;
+  bottom: 18px;
+  left: 22px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #a9ba98;
+  font-family: var(--font-mono);
+  font-size: 6.5px;
+  letter-spacing: 0.55px;
+  pointer-events: none;
+  z-index: 2;
+}
+.stack-inspector {
+  padding: 25px 29px 19px;
+  border-left: 1px solid #46573a;
+  background: #273321aa;
+  position: relative;
+}
+.stack-inspector-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.stack-inspector-top > .eyebrow {
+  font-size: 7px;
+  letter-spacing: 0.8px;
+  color: #bdceac;
+}
+.stack-module-number {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: #d8e8c7;
+  white-space: nowrap;
+}
+.stack-module-number > span {
+  color: #a6b996;
+  font-size: 8px;
+}
+.stack-selected-logos {
+  display: inline-flex;
+  gap: 11px;
+  padding: 7px;
+  min-width: 44px;
+  border-radius: 7px;
+  background: #f1f3e9;
+  margin-bottom: 13px;
+}
+.stack-selected-logos > img {
+  width: 29px;
+  height: 29px;
+  object-fit: contain;
+}
+.stack-focus-copy {
+  animation: inspectorIn 0.35s var(--ease) both;
+}
+.stack-focus-copy h3 {
+  margin: 0 0 5px;
+  color: #ecf2e5;
+  font-family: var(--font-display);
+  font-size: clamp(23px, 2.1vw, 32px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+}
+.stack-focus-copy p {
+  color: #b7c6a5;
+  font-size: 11px;
+}
+.stack-invitation {
+  margin: 17px 0;
+  font-size: 11px;
+  line-height: 1.7;
+  color: #b0c09e;
+}
+.stack-inspector .artifact-controls button {
+  border-color: #60794c;
+  color: #d7e4c9;
+  background: #34462a;
+}
+.stack-inspector .artifact-controls button:hover {
+  color: #f1f7e8;
+  background: #465f36;
+  border-color: #9db580;
+}
+.stack-inspector .artifact-action[aria-pressed="true"] {
+  color: #23331b;
+  background: #c0d2a6;
+}
+.stack-inspector-foot {
+  margin-top: 19px;
+  padding-top: 13px;
+  border-top: 1px solid #526440;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #afc497;
+  font-family: var(--font-mono);
+  font-size: 6px;
+  letter-spacing: 0.65px;
+}
+.stack-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #b2c894;
+  pointer-events: none;
+  font-family: var(--font-mono);
+  font-size: 9px;
+}
+.stack-fallback-hex {
+  display: grid;
+  place-items: center;
+  width: 92px;
+  height: 102px;
+  background: #3a4e2b88;
+  clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+.tool-card {
+  text-align: left;
+  width: 100%;
+  color: inherit;
+}
+.tool-card.tool-in-focus {
+  border-color: #88a863;
+  background: #3e5130;
+  box-shadow: inset 0 -2px 0 #a7c183;
+}
+html[data-theme="dark"] .tool-card.tool-in-focus {
+  border-color: #879e65;
+  background: #354729;
+}
+.tool-card.tool-in-focus .tool-card-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+  color: #c8dfab;
+}
+@keyframes inspectorIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 1600px) {
+  .hero-art-live {
+    height: 545px;
+  }
+}
+@media (max-width: 1150px) {
+  .hero-art-live {
+    height: 458px;
+    width: calc(100% + 50px);
+    margin-left: -28px;
+  }
+  .hero-artifact-caption,
+  .hero-artifact .artifact-controls {
+    left: 28px;
+  }
+  .stack-playground {
+    grid-template-columns: minmax(0, 1.5fr) minmax(245px, 0.85fr);
+  }
+  .stack-inspector {
+    padding-inline: 22px;
+  }
+}
+@media (max-width: 850px) {
+  .hero-art-live {
+    height: 450px;
+    width: 100%;
+    margin-left: 0;
+  }
+  .hero-viewport {
+    inset: 0 0 45px;
+  }
+  .stack-playground {
+    grid-template-columns: minmax(0, 1.35fr) minmax(230px, 0.8fr);
+  }
+  .stack-inspector {
+    padding-inline: 18px;
+  }
+  .stack-inspector .artifact-controls {
+    gap: 5px;
+  }
+}
+@media (max-width: 650px) {
+  .hero-art-live {
+    height: 412px;
+  }
+  .hero-artifact-caption,
+  .hero-artifact .artifact-controls {
+    left: 12px;
+  }
+  .hero-artifact-caption {
+    bottom: 61px;
+  }
+  .hero-artifact .artifact-controls {
+    bottom: 14px;
+    gap: 6px;
+  }
+  .artifact-icon-button {
+    width: 29px;
+    height: 29px;
+  }
+  .artifact-action {
+    min-width: 76px;
+    height: 29px;
+    padding-inline: 9px;
+    font-size: 7px;
+  }
+  .artifact-gesture {
+    font-size: 6.2px;
+  }
+  .artifact-edition {
+    font-size: 7px;
+  }
+  .hero-art-live .orbit-stamp {
+    width: 73px;
+    height: 73px;
+    right: 4px;
+    bottom: 11px;
+  }
+  .hero-art-live .orbit-stamp > svg:not(.stamp-type) {
+    width: 25px;
+  }
+  .hero-art-live .art-topnote {
+    top: 2px;
+    right: 4px;
+    font-size: 7px;
+  }
+  .hero-art-live .cross-one {
+    left: 12px;
+    top: 32px;
+  }
+  .stack-playground {
+    grid-template-columns: 1fr;
+  }
+  .stack-stage {
+    height: 294px;
+    min-height: 294px;
+  }
+  .stack-stage-top {
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    font-size: 7px;
+  }
+  .stack-drag-hint {
+    bottom: 15px;
+    left: 16px;
+    font-size: 6px;
+  }
+  .stack-inspector {
+    padding: 19px;
+    border-top: 1px solid #46573a;
+    border-left: 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 12px;
+    row-gap: 12px;
+  }
+  .stack-inspector-top {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+  .stack-selected-logos {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+    margin: 0;
+  }
+  .stack-focus-copy {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .stack-focus-copy h3 {
+    font-size: 25px;
+  }
+  .stack-focus-copy p {
+    font-size: 10px;
+  }
+  .stack-invitation {
+    grid-row: 3;
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: 10px;
+  }
+  .stack-inspector .artifact-controls {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    gap: 8px;
+  }
+  .stack-inspector-foot {
+    display: none;
+  }
+}
+@media (max-width: 360px) {
+  .hero-art-live {
+    height: 380px;
+  }
+  .hero-art-live .orbit-stamp {
+    width: 64px;
+    height: 64px;
+  }
+  .hero-artifact .artifact-controls {
+    gap: 5px;
+  }
+  .hero-artifact-caption {
+    gap: 5px;
+  }
+  .stack-stage {
+    height: 272px;
+    min-height: 272px;
+  }
+  .stack-inspector {
+    padding: 16px;
+  }
+  .stack-inspector-top > .eyebrow {
+    font-size: 6.5px;
+  }
+  .stack-focus-copy h3 {
+    font-size: 22px;
+  }
+  .stack-selected-logos {
+    padding: 5px;
+    gap: 6px;
+  }
+  .stack-selected-logos > img {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stack-focus-copy {
+    animation: none;
+  }
+  .artifact-controls button,
+  .hero-artifact-fallback {
+    transition: none;
+  }
+  .cursor-aura {
+    display: none;
+  }
+}
+/* Keep circular hit areas circular; rotate the engraved artwork, not the button box. */
+.hero-art-live:hover .orbit-stamp {
+  rotate: none;
+}
+.theme-toggle:hover {
+  transform: none;
+}
+.theme-toggle:active {
+  transform: scale(0.97);
+}
+.tool-card.tool-in-focus > p,
+html[data-theme="dark"] .tool-card.tool-in-focus > p {
+  color: #c0d0ad;
+}

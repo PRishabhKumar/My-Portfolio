@@ -1,0 +1,73 @@
+{
+  "errors": [],
+  "checks": [
+    "Real WebGL2 scene with 212 meshes: animated head, breathing and mouse-hand movement; monitor changes from desktop to VS Code; actual 3D camera moves into the display.",
+    "Integrated VS Code terminal visibly expands upward; resize cursor stays on the divider. Both original commands, pauses and Vite output are preserved. No Command Prompt window remains.",
+    "Automatic Control-click is intercepted and reveals the unchanged portfolio in place; the 3D intro is disposed before entry.",
+    "WebGL fallback, keyboard skip/focus, Escape/deep-link restoration, touch skip and reduced-motion direct entry passed.",
+    "All 16 protected portfolio source/artwork files remain byte-for-byte unchanged."
+  ],
+  "layouts": [
+    {
+      "width": 320,
+      "height": 568,
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "overflow": false
+    },
+    {
+      "width": 850,
+      "height": 768,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "overflow": false
+    }
+  ],
+  "accessibility": [
+    {
+      "name": "Studio intro and skip control",
+      "violations": []
+    }
+  ]
+}

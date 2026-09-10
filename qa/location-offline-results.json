@@ -1,0 +1,6 @@
+{
+  "errors": [],
+  "offline": "Real WebGL Sun/Earth, local globe/satellite textures, camera coordinates, the supplied gate photo, and return-to-card work without networking.",
+  "opaqueIframe": "The same journey, native dialog, and automatic arrival close pass inside a script-only opaque-origin iframe.",
+  "privacy": "No GPS permissions or live map-tile API is used."
+}

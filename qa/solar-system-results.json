@@ -1,0 +1,107 @@
+{
+  "errors": [],
+  "planets": [
+    {
+      "name": "mercury",
+      "rotates": true,
+      "revolves": true
+    },
+    {
+      "name": "venus",
+      "rotates": true,
+      "revolves": true
+    },
+    {
+      "name": "earth",
+      "rotates": true,
+      "revolves": true
+    },
+    {
+      "name": "mars",
+      "rotates": true,
+      "revolves": true
+    },
+    {
+      "name": "jupiter",
+      "rotates": true,
+      "revolves": true
+    },
+    {
+      "name": "saturn",
+      "rotates": true,
+      "revolves": true
+    },
+    {
+      "name": "uranus",
+      "rotates": true,
+      "revolves": true
+    },
+    {
+      "name": "neptune",
+      "rotates": true,
+      "revolves": true
+    }
+  ],
+  "layouts": [
+    {
+      "width": 320,
+      "height": 568,
+      "allPlanetLabelsVisible": true
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "allPlanetLabelsVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "allPlanetLabelsVisible": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "allPlanetLabelsVisible": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "allPlanetLabelsVisible": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "allPlanetLabelsVisible": true
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "allPlanetLabelsVisible": true
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "allPlanetLabelsVisible": true
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "allPlanetLabelsVisible": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "allPlanetLabelsVisible": true
+    }
+  ],
+  "audits": [
+    {
+      "name": "Concealed college card",
+      "violations": []
+    }
+  ],
+  "checks": [
+    "All eight planets have individual axial rotation and orbital movement; pause freezes all of them.",
+    "Cancelling retains the blurred details and invitation; completing the journey reveals VIT, CGPA and the college details."
+  ]
+}

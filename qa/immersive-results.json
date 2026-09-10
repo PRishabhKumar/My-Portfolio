@@ -1,0 +1,102 @@
+{
+  "errors": [],
+  "contours": [
+    {
+      "name": "Primary CTA",
+      "mode": "frame",
+      "maxError": 0
+    },
+    {
+      "name": "Eclipse pill",
+      "mode": "frame",
+      "maxError": 0
+    },
+    {
+      "name": "Round orbit seal",
+      "mode": "circle",
+      "maxError": 0
+    },
+    {
+      "name": "Round 3D control",
+      "mode": "circle",
+      "maxError": 0
+    },
+    {
+      "name": "Project image",
+      "mode": "frame",
+      "maxError": 0
+    },
+    {
+      "name": "Modal close control",
+      "mode": "circle",
+      "maxError": 0
+    },
+    {
+      "name": "Skill card",
+      "mode": "frame",
+      "maxError": 0
+    }
+  ],
+  "viewports": [
+    {
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "width": 375,
+      "scrollWidth": 375
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "width": 430,
+      "scrollWidth": 430
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "width": 850,
+      "scrollWidth": 850
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024
+    },
+    {
+      "width": 1280,
+      "scrollWidth": 1280
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "width": 1920,
+      "scrollWidth": 1920
+    }
+  ],
+  "audits": [
+    {
+      "name": "Light desktop",
+      "violations": []
+    },
+    {
+      "name": "Dark project dialog",
+      "violations": []
+    },
+    {
+      "name": "Dark interactive toolkit",
+      "violations": []
+    },
+    {
+      "name": "Dark mobile",
+      "violations": []
+    }
+  ],
+  "webgl": "Two real WebGL2 scenes, built from procedural geometry. Drag, keyboard rotation, unfold, reset, spin, pause, 3D raycast selection, DOM-to-scene synchronization, theme changes, and all five logo sets passed.",
+  "artwork": "All five approved project images are byte-for-byte unchanged."
+}

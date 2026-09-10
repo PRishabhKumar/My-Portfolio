@@ -1,0 +1,10 @@
+{
+  "seconds": 22.55,
+  "pausesMs": {
+    "startMenu": 1600,
+    "terminalBeforeTyping": 1800,
+    "betweenCommands": 1400,
+    "readOutput": 2550
+  },
+  "status": "Relaxed Command Prompt pacing preserved."
+}

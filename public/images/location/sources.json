@@ -1,0 +1,172 @@
+[
+  {
+    "file": "earth-day.webp",
+    "source": "https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg",
+    "author": "Solar System Scope",
+    "license": "CC BY 4.0",
+    "changes": "Resized/compressed for browser use; cloud luminance converted to alpha."
+  },
+  {
+    "file": "earth-night.webp",
+    "source": "https://www.solarsystemscope.com/textures/download/2k_earth_nightmap.jpg",
+    "author": "Solar System Scope",
+    "license": "CC BY 4.0",
+    "changes": "Resized/compressed for browser use; cloud luminance converted to alpha."
+  },
+  {
+    "file": "earth-clouds.webp",
+    "source": "https://www.solarsystemscope.com/textures/download/2k_earth_clouds.jpg",
+    "author": "Solar System Scope",
+    "license": "CC BY 4.0",
+    "changes": "Resized/compressed for browser use; cloud luminance converted to alpha."
+  },
+  {
+    "file": "earth-normal.webp",
+    "source": "https://www.solarsystemscope.com/textures/download/2k_earth_normal_map.tif",
+    "author": "Solar System Scope",
+    "license": "CC BY 4.0",
+    "changes": "Resized/compressed for browser use; cloud luminance converted to alpha."
+  },
+  {
+    "file": "earth-specular.webp",
+    "source": "https://www.solarsystemscope.com/textures/download/2k_earth_specular_map.tif",
+    "author": "Solar System Scope",
+    "license": "CC BY 4.0",
+    "changes": "Resized/compressed for browser use; cloud luminance converted to alpha."
+  },
+  {
+    "file": "sun.webp",
+    "source": "https://www.solarsystemscope.com/textures/download/2k_sun.jpg",
+    "author": "Solar System Scope",
+    "license": "CC BY 4.0",
+    "changes": "Resized/compressed for browser use; cloud luminance converted to alpha."
+  },
+  {
+    "file": "india.webp",
+    "bounds": [
+      55,
+      -4,
+      105,
+      42
+    ],
+    "projection": "EPSG:4326",
+    "source": "https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg",
+    "author": "Solar System Scope",
+    "license": "CC BY 4.0",
+    "attribution": "Solar System Scope (based on NASA Blue Marble imagery)",
+    "changes": "Higher-resolution geographic crop of the same global day map, for a seam-free globe-to-India transition."
+  },
+  {
+    "file": "tamil-nadu.webp",
+    "bounds": [
+      72,
+      5,
+      85,
+      18
+    ],
+    "projection": "EPSG:4326",
+    "source": "https://tiles.maps.eox.at/wms?service=WMS&version=1.1.1&request=GetMap&layers=s2cloudless&styles=&srs=EPSG%3A4326&bbox=72%2C5%2C85%2C18&width=2048&height=2048&format=image%2Fjpeg",
+    "author": "EOX IT Services GmbH",
+    "license": "CC BY 4.0",
+    "attribution": "Sentinel-2 cloudless - https://s2maps.eu by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2016 & 2017)",
+    "changes": "Fixed regional crops, reprojected by WMS and compressed to WebP."
+  },
+  {
+    "file": "vellore.webp",
+    "bounds": [
+      78.4,
+      12.25,
+      79.9,
+      13.65
+    ],
+    "projection": "EPSG:4326",
+    "source": "https://tiles.maps.eox.at/wms?service=WMS&version=1.1.1&request=GetMap&layers=s2cloudless&styles=&srs=EPSG%3A4326&bbox=78.4%2C12.25%2C79.9%2C13.65&width=2048&height=2048&format=image%2Fjpeg",
+    "author": "EOX IT Services GmbH",
+    "license": "CC BY 4.0",
+    "attribution": "Sentinel-2 cloudless - https://s2maps.eu by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2016 & 2017)",
+    "changes": "Fixed regional crops, reprojected by WMS and compressed to WebP."
+  },
+  {
+    "file": "campus.webp",
+    "bounds": [
+      79.113,
+      12.929,
+      79.2,
+      13.013
+    ],
+    "projection": "EPSG:4326",
+    "source": "https://tiles.maps.eox.at/wms?service=WMS&version=1.1.1&request=GetMap&layers=s2cloudless&styles=&srs=EPSG%3A4326&bbox=79.113%2C12.929%2C79.2%2C13.013&width=1536&height=1536&format=image%2Fjpeg",
+    "author": "EOX IT Services GmbH",
+    "license": "CC BY 4.0",
+    "attribution": "Sentinel-2 cloudless - https://s2maps.eu by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2016 & 2017)",
+    "changes": "Fixed regional crops, reprojected by WMS and compressed to WebP."
+  },
+  {
+    "file": "vit-main-gate.webp",
+    "source": "User-provided image-1.png",
+    "changes": "Format conversion only; no generated or altered architecture."
+  },
+  {
+    "file": "space-fallback.webp",
+    "source": "Rendered from the live eight-planet solar-system overview",
+    "author": "Original scene; textures by Solar System Scope",
+    "license": "Planet textures: CC BY 4.0",
+    "changes": "Static compatibility fallback; interactive WebGL is used where supported."
+  },
+  {
+    "file": "mercury.webp",
+    "source": "https://www.solarsystemscope.com/textures/download/2k_mercury.jpg",
+    "author": "Solar System Scope",
+    "license": "CC BY 4.0",
+    "changes": "Resized and compressed for the animated solar-system overview."
+  },
+  {
+    "file": "venus.webp",
+    "source": "https://www.solarsystemscope.com/textures/download/2k_venus_atmosphere.jpg",
+    "author": "Solar System Scope",
+    "license": "CC BY 4.0",
+    "changes": "Resized and compressed for the animated solar-system overview."
+  },
+  {
+    "file": "mars.webp",
+    "source": "https://www.solarsystemscope.com/textures/download/2k_mars.jpg",
+    "author": "Solar System Scope",
+    "license": "CC BY 4.0",
+    "changes": "Resized and compressed for the animated solar-system overview."
+  },
+  {
+    "file": "jupiter.webp",
+    "source": "https://www.solarsystemscope.com/textures/download/2k_jupiter.jpg",
+    "author": "Solar System Scope",
+    "license": "CC BY 4.0",
+    "changes": "Resized and compressed for the animated solar-system overview."
+  },
+  {
+    "file": "saturn.webp",
+    "source": "https://www.solarsystemscope.com/textures/download/2k_saturn.jpg",
+    "author": "Solar System Scope",
+    "license": "CC BY 4.0",
+    "changes": "Resized and compressed for the animated solar-system overview."
+  },
+  {
+    "file": "uranus.webp",
+    "source": "https://www.solarsystemscope.com/textures/download/2k_uranus.jpg",
+    "author": "Solar System Scope",
+    "license": "CC BY 4.0",
+    "changes": "Resized and compressed for the animated solar-system overview."
+  },
+  {
+    "file": "neptune.webp",
+    "source": "https://www.solarsystemscope.com/textures/download/2k_neptune.jpg",
+    "author": "Solar System Scope",
+    "license": "CC BY 4.0",
+    "changes": "Resized and compressed for the animated solar-system overview."
+  },
+  {
+    "file": "saturn-rings.webp",
+    "source": "https://www.solarsystemscope.com/textures/download/2k_saturn_ring_alpha.png",
+    "author": "Solar System Scope",
+    "license": "CC BY 4.0",
+    "changes": "Resized and compressed for the animated solar-system overview."
+  }
+]

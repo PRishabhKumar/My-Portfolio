@@ -1,0 +1,109 @@
+{
+  "errors": [],
+  "checks": [
+    "Whole-card trigger, scroll-revealed hint, native dialog, independent scroll lock, real WebGL2 rotation/revolution, pause and dialog-safe custom cursor passed.",
+    "Real wheel scrolling leaves the page still; camera coordinates track the actual globe view through India, Tamil Nadu, Vellore and the campus. The supplied gate photo and full college name are shown; Keep this view and return work.",
+    "Arrival auto-close and college-name focus/scroll return passed.",
+    "Escape and keyboard focus restoration passed.",
+    "Touch scrolling is contained in the journey, without moving the underlying page.",
+    "No-WebGL fallback remains navigable and closable.",
+    "All five approved project images and the original cursor/3D portfolio assets are unchanged."
+  ],
+  "coordinates": [
+    {
+      "name": "India",
+      "lat": 20.593703,
+      "lon": 78.962898
+    },
+    {
+      "name": "Tamil Nadu",
+      "lat": 11.127103,
+      "lon": 78.6569
+    },
+    {
+      "name": "Vellore",
+      "lat": 12.9165,
+      "lon": 79.1325
+    },
+    {
+      "name": "VIT main gate",
+      "lat": 12.96823,
+      "lon": 79.155868
+    }
+  ],
+  "layouts": [
+    {
+      "width": 320,
+      "height": 568,
+      "photoFits": true
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "photoFits": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "photoFits": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "photoFits": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "photoFits": true
+    },
+    {
+      "width": 850,
+      "height": 768,
+      "photoFits": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "photoFits": true
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "photoFits": true
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "photoFits": true
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "photoFits": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "photoFits": true
+    }
+  ],
+  "audits": [
+    {
+      "name": "Education card with location invitation",
+      "violations": []
+    },
+    {
+      "name": "Glass location dialog, space stage",
+      "violations": []
+    },
+    {
+      "name": "India satellite approach",
+      "violations": []
+    },
+    {
+      "name": "VIT main-gate arrival",
+      "violations": []
+    }
+  ]
+}

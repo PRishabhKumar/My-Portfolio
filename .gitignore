@@ -1,0 +1,7 @@
+node_modules/
+dist/
+qa/*.png
+qa/*.jpg
+artwork-renders/
+assets-originals/
+.DS_Store

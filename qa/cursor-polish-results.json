@@ -1,0 +1,11 @@
+{
+  "errors": [],
+  "ball": 14,
+  "hoverGap": 6,
+  "bloom": {
+    "duration": 950,
+    "peakOpacity": 1,
+    "maxStrokeWidth": 40
+  },
+  "offline": "Updated cursor and 3D hero passed."
+}

@@ -1,0 +1,190 @@
+[
+  {
+    "id": "aws",
+    "file": "aws.svg",
+    "provider": "Devicon",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+  },
+  {
+    "id": "c",
+    "file": "c.svg",
+    "provider": "Devicon",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"
+  },
+  {
+    "id": "claude",
+    "file": "claude.svg",
+    "provider": "Simple Icons",
+    "brandSource": "https://claude.ai",
+    "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/claude.svg"
+  },
+  {
+    "id": "copilot",
+    "file": "copilot.svg",
+    "provider": "Simple Icons",
+    "brandSource": "https://primer.style/foundations/icons/copilot-24",
+    "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/githubcopilot.svg"
+  },
+  {
+    "id": "css3",
+    "file": "css3.svg",
+    "provider": "Devicon",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+  },
+  {
+    "id": "docker",
+    "file": "docker.svg",
+    "provider": "Simple Icons",
+    "brandSource": "https://www.docker.com/company/newsroom/media-resources",
+    "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/docker.svg"
+  },
+  {
+    "id": "express",
+    "file": "express.svg",
+    "provider": "Devicon",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg"
+  },
+  {
+    "id": "flask",
+    "file": "flask.svg",
+    "provider": "Devicon",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/flask/flask-original.svg"
+  },
+  {
+    "id": "framer-motion",
+    "file": "framer-motion.svg",
+    "provider": "Devicon",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/framermotion/framermotion-original.svg"
+  },
+  {
+    "id": "gemini",
+    "file": "gemini.svg",
+    "provider": "Lobe Icons",
+    "source": "https://raw.githubusercontent.com/lobehub/lobe-icons/master/packages/static-svg/icons/gemini-color.svg"
+  },
+  {
+    "id": "git",
+    "file": "git.svg",
+    "provider": "Simple Icons",
+    "brandSource": "https://git-scm.com/community/logos",
+    "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/git.svg"
+  },
+  {
+    "id": "hoppscotch",
+    "file": "hoppscotch.svg",
+    "provider": "Simple Icons",
+    "brandSource": "https://hoppscotch.com",
+    "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/hoppscotch.svg"
+  },
+  {
+    "id": "html5",
+    "file": "html5.svg",
+    "provider": "Devicon",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+  },
+  {
+    "id": "java",
+    "file": "java.svg",
+    "provider": "Devicon",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+  },
+  {
+    "id": "javascript",
+    "file": "javascript.svg",
+    "provider": "Devicon",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+  },
+  {
+    "id": "mongodb",
+    "file": "mongodb.svg",
+    "provider": "Devicon",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg"
+  },
+  {
+    "id": "mysql",
+    "file": "mysql.svg",
+    "provider": "Devicon",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
+  },
+  {
+    "id": "nextjs",
+    "file": "nextjs.svg",
+    "provider": "Devicon",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg"
+  },
+  {
+    "id": "nginx",
+    "file": "nginx.svg",
+    "provider": "Simple Icons",
+    "brandSource": "https://www.nginx.com/press/",
+    "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/nginx.svg"
+  },
+  {
+    "id": "nodejs",
+    "file": "nodejs.svg",
+    "provider": "Devicon",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
+  },
+  {
+    "id": "openai",
+    "file": "openai.svg",
+    "provider": "Lobe Icons",
+    "source": "https://raw.githubusercontent.com/lobehub/lobe-icons/master/packages/static-svg/icons/openai.svg"
+  },
+  {
+    "id": "opencv",
+    "file": "opencv.svg",
+    "provider": "Devicon",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/opencv/opencv-original.svg"
+  },
+  {
+    "id": "porcupine",
+    "file": "porcupine.png",
+    "provider": "Project-owned repository",
+    "source": "https://raw.githubusercontent.com/Picovoice/porcupine/master/demo/flutter/ios/Runner/Assets.xcassets/AppIcon.appiconset/pv_circle_512-1024.png"
+  },
+  {
+    "id": "python",
+    "file": "python.svg",
+    "provider": "Devicon",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+  },
+  {
+    "id": "react",
+    "file": "react.svg",
+    "provider": "Devicon",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+  },
+  {
+    "id": "socketio",
+    "file": "socketio.svg",
+    "provider": "Simple Icons",
+    "brandSource": "https://socket.io",
+    "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/socketdotio.svg"
+  },
+  {
+    "id": "tesseract",
+    "file": "tesseract.png",
+    "provider": "Project-owned repository",
+    "source": "https://raw.githubusercontent.com/naptha/tesseract.js/master/docs/images/tesseract.png"
+  },
+  {
+    "id": "typescript",
+    "file": "typescript.svg",
+    "provider": "Devicon",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+  },
+  {
+    "id": "vite",
+    "file": "vite.svg",
+    "provider": "Project-owned repository",
+    "source": "https://raw.githubusercontent.com/voidzero-dev/community-design-resources/55902097229cf01cf2a4ceb376f992f5cf306756/brand-assets/vite/vite-icon-color-bracketless.svg"
+  },
+  {
+    "id": "webrtc",
+    "file": "webrtc.svg",
+    "provider": "Simple Icons",
+    "brandSource": "https://webrtc.org",
+    "source": "https://github.com/simple-icons/simple-icons/blob/develop/icons/webrtc.svg"
+  }
+]

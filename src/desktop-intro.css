@@ -1,0 +1,1482 @@
+/* A short, self-contained Windows-style opening scene. Portfolio styles stay intact. */
+html[data-boot-active="true"] .signature-cursor-layer {
+  visibility: hidden !important;
+}
+.boot-intro,
+.boot-intro *,
+.boot-intro *::before,
+.boot-intro *::after {
+  cursor: none !important;
+}
+.boot-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  overflow: hidden;
+  background: #111a14;
+  color: #edf2e7;
+  color-scheme: dark;
+  font-family: "Segoe UI", "DM Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  isolation: isolate;
+}
+.boot-desktop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  animation: boot-desktop-in 650ms ease-out both;
+}
+.boot-wallpaper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 57% 52%;
+}
+.boot-wallpaper-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #101a1347, transparent 46%),
+    linear-gradient(
+      0deg,
+      #0d17156b,
+      transparent 25%,
+      transparent 72%,
+      #0d17153d
+    );
+}
+.boot-topline {
+  position: absolute;
+  top: 26px;
+  left: 28px;
+  right: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9;
+}
+.boot-workspace-label {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 9px 14px 9px 11px;
+  border: 1px solid #cee0bb24;
+  border-radius: 8px;
+  background: #142218d9;
+  box-shadow: 0 3px 18px #00000012;
+}
+.boot-workspace-label > svg {
+  color: #c3dea9;
+}
+.boot-workspace-label > span {
+  font: 9px/1.5 var(--font-mono);
+  letter-spacing: 0.11em;
+}
+.boot-workspace-label small {
+  display: block;
+  margin-top: 2px;
+  color: #b3c6a8;
+  font-size: 7px;
+  letter-spacing: 0.17em;
+}
+.boot-skip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 12px;
+  min-height: 40px;
+  color: #edf2e7;
+  background: #142218ed;
+  border: 1px solid #b7cda948;
+  border-radius: 7px;
+  font:
+    11px "DM Sans",
+    sans-serif;
+  transition:
+    background 0.18s,
+    border-color 0.18s;
+}
+.boot-skip:hover {
+  background: #2c422a;
+  border-color: #b9d49b;
+}
+.boot-skip:focus-visible {
+  outline: 2px solid #d7eaba;
+  outline-offset: 5px;
+}
+.boot-skip kbd {
+  margin-left: 9px;
+  padding: 1px 4px 2px;
+  border: 1px solid #a9ba9a52;
+  border-radius: 3px;
+  color: #c6d6bc;
+  font: 8px var(--font-mono);
+}
+.boot-desktop-icons {
+  position: absolute;
+  left: 28px;
+  top: 113px;
+  display: grid;
+  gap: 23px;
+}
+.boot-desktop-icon {
+  width: 69px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 7px;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.3;
+  color: #f0f4e9;
+  text-shadow: 0 1px 5px #000;
+}
+.boot-desktop-icon > span:first-child {
+  filter: drop-shadow(0 3px 3px #0004);
+}
+.boot-pc-icon {
+  color: #e4eadc;
+  height: 36px;
+  display: grid;
+  place-items: center;
+}
+.boot-pc-icon svg {
+  fill: #6b8f865e;
+}
+.boot-trash-icon {
+  color: #ebefe5;
+  height: 36px;
+  display: grid;
+  place-items: center;
+}
+.boot-trash-icon svg {
+  fill: #dbe4d522;
+}
+.boot-wallpaper-signature {
+  position: absolute;
+  right: 33px;
+  bottom: 87px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: #e1e9d5c4;
+}
+.boot-wallpaper-signature span {
+  font: 7px/1.8 var(--font-mono);
+  letter-spacing: 0.14em;
+}
+.boot-wallpaper-signature b {
+  font-size: 7px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+/* Centered taskbar and the Start/search panel. */
+.boot-taskbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 57px;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #f0f4e8c4;
+  background: #e2e9dcd9;
+  color: #253122;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  box-shadow: 0 -10px 50px #0710090d;
+}
+.boot-taskbar-widgets {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 9px;
+  line-height: 1.4;
+}
+.boot-taskbar-widgets b {
+  font-weight: 600;
+}
+.boot-widget-orb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 28%, #ecf6be, #9db77c 55%, #5f7544);
+  border: 1px solid #72875e;
+  box-shadow:
+    inset -3px -3px 6px #72865a4d,
+    0 2px 4px #24302412;
+}
+.boot-taskbar-apps {
+  position: absolute;
+  left: 50%;
+  top: 5px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  height: 46px;
+}
+.boot-taskbar-apps > span {
+  width: 42px;
+  height: 44px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.boot-taskbar-apps > .boot-taskbar-search {
+  width: 116px;
+  height: 33px;
+  margin: 0 3px;
+  justify-content: flex-start;
+  gap: 9px;
+  padding-left: 12px;
+  color: #3c4935;
+  border: 1px solid #a4b49976;
+  border-radius: 19px;
+  background: #f7f9f091;
+  font-size: 11px;
+}
+.boot-taskbar-apps .is-active {
+  background: #ffffff88;
+  box-shadow: inset 0 0 0 1px #ffffff70;
+}
+.boot-taskbar-apps .is-active::after {
+  content: "";
+  width: 13px;
+  height: 3px;
+  border-radius: 2px;
+  background: #597541;
+  position: absolute;
+  bottom: 1px;
+  left: calc(50% - 6.5px);
+}
+.boot-taskbar-start.is-active svg {
+  animation: boot-key-tap 0.23s ease-out;
+}
+.boot-system-tray {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.boot-system-tray > span:not(.boot-show-desktop) {
+  font-size: 10px;
+  line-height: 1.65;
+  text-align: right;
+  margin-left: 1px;
+  min-width: 64px;
+}
+.boot-show-desktop {
+  height: 34px;
+  border-left: 1px solid #81937866;
+  margin-left: 1px;
+}
+.boot-app-icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  color: #57665b;
+}
+.boot-app-folder {
+  color: #ac8e36;
+}
+.boot-app-folder svg {
+  fill: #f0cf65;
+}
+.boot-app-notes {
+  color: #64868c;
+}
+.boot-app-notes svg {
+  fill: #e5f0eb;
+}
+.boot-app-calculator {
+  color: #63756b;
+}
+.boot-app-calculator svg {
+  fill: #dce5db;
+}
+.boot-app-photos {
+  color: #5b8576;
+}
+.boot-app-photos svg {
+  fill: #c5ddd0;
+}
+.boot-app-settings {
+  color: #738177;
+}
+.boot-app-settings svg {
+  fill: #cbd2c8;
+}
+.boot-cmd-icon {
+  width: 36px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 5px;
+  background: #121613;
+  color: #f0f3eb;
+  border: 1px solid #546053;
+  border-top: 5px solid #dde2d7;
+  border-radius: 3px;
+  box-shadow: 0 2px 3px #00000019;
+  flex-shrink: 0;
+}
+.boot-cmd-icon > span {
+  font:
+    9px/1 Consolas,
+    "DM Mono",
+    monospace;
+  letter-spacing: -0.1em;
+}
+.boot-cmd-icon-small {
+  width: 24px;
+  height: 19px;
+  padding-left: 3px;
+  border-top-width: 3px;
+  border-radius: 2px;
+}
+.boot-cmd-icon-small > span {
+  font-size: 7px;
+}
+.boot-start-menu {
+  position: absolute;
+  left: 50%;
+  bottom: 72px;
+  width: min(600px, calc(100% - 36px));
+  height: min(508px, calc(100svh - 156px));
+  display: flex;
+  flex-direction: column;
+  padding: 30px 32px 0;
+  background: #edf1e8f5;
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+  border: 1px solid #eff5e8eb;
+  border-radius: 9px;
+  color: #222b20;
+  color-scheme: light;
+  box-shadow:
+    0 16px 65px #04110652,
+    0 1px 2px #0003;
+  transform: translateX(-50%);
+  animation: boot-start-in 290ms cubic-bezier(0.2, 0.8, 0.3, 1) both;
+}
+.boot-search-field {
+  height: 41px;
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 0 15px;
+  background: #fbfcf7;
+  border: 1px solid #bfcbb8;
+  border-bottom: 2px solid #6a844e;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px #23351a08;
+  color: #44503f;
+}
+.boot-search-field > span {
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+}
+.boot-search-caret {
+  display: inline-block;
+  height: 15px;
+  width: 1px;
+  background: #394a30;
+  margin-left: 1px;
+  animation: boot-caret 900ms step-end infinite;
+}
+.boot-pinned-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 27px 0 18px;
+  padding: 0 9px;
+  font-size: 12px;
+}
+.boot-pinned-title > span {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  font-size: 10px;
+  padding: 3px 7px;
+  border: 1px solid #d0d8c9;
+  background: #f9fbf460;
+  border-radius: 4px;
+}
+.boot-pinned-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px 6px;
+}
+.boot-pinned-app {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+.boot-pinned-app > span:last-child {
+  font-size: 10px;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+}
+.boot-pinned-app > :first-child {
+  height: 32px;
+}
+.boot-pinned-app > .boot-cmd-icon {
+  height: 28px;
+  margin: 2px 0;
+}
+.boot-recommended-title {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 27px 9px 15px;
+}
+.boot-recommended {
+  display: grid;
+  grid-template-columns: 36px 1fr 27px 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 0 9px;
+}
+.boot-recommended strong,
+.boot-recommended small {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+}
+.boot-recommended small {
+  font-size: 10px;
+  color: #627159;
+  margin-top: 2px;
+}
+.boot-start-footer {
+  height: 64px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 41px;
+  margin: auto -32px 0;
+  border-top: 1px solid #cbd5c16e;
+  background: #dce6d36e;
+  border-radius: 0 0 9px 9px;
+  font-size: 11px;
+}
+.boot-avatar {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  background: #738b61;
+  border: 1px solid #536e48;
+  border-radius: 50%;
+  color: #fbfff4;
+  font-size: 9px;
+}
+.boot-start-footer > svg {
+  margin-left: auto;
+}
+.boot-search-filters {
+  display: flex;
+  gap: 23px;
+  margin: 22px 5px 17px;
+  font-size: 11px;
+}
+.boot-search-filters > span {
+  padding: 0 0 7px;
+}
+.boot-search-filters .is-current {
+  border-bottom: 2px solid #72914e;
+}
+.boot-search-results {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 14px;
+  flex: 1;
+  min-height: 0;
+  padding-bottom: 20px;
+}
+.boot-best-match > strong {
+  display: block;
+  font-size: 11px;
+  margin: 0 8px 12px;
+}
+.boot-command-result {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  background: #dce8d2;
+  border: 1px solid #c2d4b3;
+  border-radius: 5px;
+  transition:
+    background 0.18s,
+    transform 0.18s;
+}
+.boot-command-result b,
+.boot-command-result small {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+}
+.boot-command-result small {
+  font-size: 10px;
+  color: #5b6c50;
+  margin-top: 3px;
+}
+.boot-command-result > svg {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.boot-command-result.is-pressed {
+  background: #c3d8af;
+  transform: scale(0.985);
+}
+.boot-web-result {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 18px 10px;
+  color: #5a6854;
+  font-size: 11px;
+}
+.boot-web-result > svg:last-child {
+  margin-left: auto;
+}
+.boot-command-preview {
+  background: #f8faf48a;
+  border: 1px solid #dae3d2;
+  border-radius: 6px;
+  padding: 27px 22px 17px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.boot-command-preview > .boot-cmd-icon {
+  transform: scale(1.4);
+  margin: 8px 0 24px;
+}
+.boot-command-preview > strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+.boot-command-preview > small {
+  font-size: 10px;
+  margin: 4px 0 21px;
+  color: #66745c;
+}
+.boot-command-preview > div {
+  border-top: 1px solid #d7e0cf;
+  padding-top: 17px;
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 11px;
+}
+.boot-command-preview > p {
+  font-size: 10px;
+  line-height: 2.4;
+  color: #54624c;
+  width: 100%;
+  padding-left: 29px;
+  margin: 9px 0 0;
+}
+.boot-start-closing {
+  animation: boot-start-out 220ms 250ms ease-in both;
+}
+
+/* Command Prompt. Typed content is real text, never an image or video. */
+.boot-terminal {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(876px, calc(100% - 104px));
+  height: min(484px, calc(100svh - 184px));
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #9ea99587;
+  border-radius: 9px;
+  background: #101510;
+  box-shadow:
+    0 30px 110px #071009ad,
+    0 2px 9px #0008;
+  overflow: hidden;
+  animation: boot-terminal-in 310ms cubic-bezier(0.2, 0.8, 0.3, 1) both;
+}
+.boot-terminal-titlebar {
+  height: 37px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-left: 13px;
+  color: #293026;
+  background: #edf0e8;
+  font-size: 11px;
+}
+.boot-terminal-titlebar > .boot-cmd-icon {
+  width: 18px;
+  height: 13px;
+  border-top-width: 2px;
+  padding-left: 1px;
+}
+.boot-terminal-titlebar > .boot-cmd-icon > span {
+  font-size: 6px;
+}
+.boot-terminal-titlebar > div {
+  margin-left: auto;
+  display: flex;
+  height: 100%;
+}
+.boot-terminal-titlebar > div > svg {
+  box-sizing: content-box;
+  width: 14px;
+  padding: 0 16px;
+  height: 100%;
+  stroke-width: 1;
+}
+.boot-terminal-body {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #405136 transparent;
+  padding: 23px 27px 18px;
+  color: #d9dfd4;
+  font-family: "Cascadia Code", Consolas, "DM Mono", monospace;
+  font-size: 13px;
+  line-height: 1.65;
+  font-variant-ligatures: none;
+}
+.boot-command-banner {
+  margin-bottom: 20px;
+  color: #bec9b6;
+  font-size: 12px;
+  line-height: 1.65;
+}
+.boot-command-line {
+  min-height: 23px;
+  margin-top: 4px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.boot-prompt {
+  color: #f0f3eb;
+}
+.boot-text-caret {
+  display: inline-block;
+  width: 7px;
+  height: 15px;
+  margin-left: 1px;
+  vertical-align: -2px;
+  background: #e3eadd;
+  animation: boot-caret 950ms step-end infinite;
+}
+.boot-npm-output {
+  margin-top: 16px;
+  color: #bcc9b2;
+  line-height: 1.65;
+  animation: boot-print 100ms ease-out;
+}
+.boot-vite-ready {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding-left: 14px;
+  margin-top: 20px;
+  animation: boot-print 150ms ease-out;
+}
+.boot-vite-ready > b {
+  color: #10160e;
+  background: #a8d984;
+  font-size: 12px;
+  line-height: 1.35;
+  padding: 1px 5px 2px;
+  font-weight: 600;
+}
+.boot-vite-ready > span:nth-child(2) {
+  color: #b6e697;
+  font-weight: 500;
+}
+.boot-ready-time {
+  padding-left: 12px;
+  color: #a7b69d;
+  font-size: 12px;
+}
+.boot-ready-time strong {
+  color: #edf2e5;
+  font-weight: 400;
+}
+.boot-server-addresses {
+  margin: 16px 0 0 14px;
+  animation: boot-print 140ms ease-out;
+}
+.boot-server-addresses > div {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  min-height: 24px;
+}
+.boot-output-arrow {
+  color: #a0d881;
+}
+.boot-server-addresses strong {
+  font-weight: 600;
+  color: #d8e1d0;
+}
+.boot-local-link {
+  color: #a4d7d1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #a4d7d159;
+  border-radius: 3px;
+  position: relative;
+  white-space: nowrap;
+}
+.boot-local-link::before {
+  content: "";
+  position: absolute;
+  inset: -2px -5px;
+  border: 1px solid #bdd8a44a;
+  background: #bedca516;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.boot-local-link.is-pointed {
+  color: #d4f1bc;
+  text-decoration-color: #d4f1bc;
+}
+.boot-local-link.is-pointed::before {
+  opacity: 1;
+}
+.boot-network-line {
+  color: #9aab8f;
+}
+.boot-network-line > span:last-child {
+  color: #abbfa5;
+}
+.boot-terminal-help {
+  margin: 11px 0 0 14px;
+  font-size: 12px;
+  color: #9eae93;
+}
+.boot-terminal-help > span {
+  color: #a0d881;
+  margin-right: 7px;
+}
+.boot-terminal-help > b {
+  color: #d9e3d0;
+  font-weight: 400;
+}
+.boot-terminal-status {
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  padding: 0 14px;
+  border-top: 1px solid #778f622a;
+  background: #172015;
+  color: #a7b59a;
+  font: 8px/1 var(--font-mono);
+}
+.boot-terminal-status > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.boot-terminal-status i {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #b0d384;
+}
+.boot-terminal-status .boot-status-divider {
+  width: 1px;
+  height: 8px;
+  background: #8da37a45;
+  margin: 0 4px;
+  border-radius: 0;
+}
+.boot-terminal-launched .boot-local-link::before {
+  animation: boot-local-click 0.4s ease-out both;
+}
+
+/* Quiet story captions, keypresses, and one choreographed mouse pointer. */
+.boot-caption {
+  position: absolute;
+  left: 30px;
+  bottom: 87px;
+  width: 291px;
+  padding: 12px 14px 10px;
+  border: 1px solid #9db58c2b;
+  border-radius: 6px;
+  background: #142118db;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.boot-caption > div:first-child {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.boot-step-number {
+  font: 9px var(--font-mono);
+  white-space: nowrap;
+  color: #d4e9bd;
+}
+.boot-step-number > span {
+  color: #a3b695;
+  font-size: 8px;
+}
+.boot-caption > div:first-child > span:last-child {
+  font-size: 10px;
+  color: #dbe5d4;
+}
+.boot-progress {
+  height: 1px;
+  background: #7696654d;
+  margin-top: 11px;
+  overflow: hidden;
+}
+.boot-progress i {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform-origin: left;
+  background: #c0dfa0;
+}
+.boot-key-cue {
+  position: absolute;
+  bottom: 97px;
+  left: 50%;
+  transform: translate(-50%, 8px);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  height: 36px;
+  padding: 0 13px;
+  border: 1px solid #aac09257;
+  border-radius: 6px;
+  background: #152216ee;
+  box-shadow: 0 4px 15px #0002;
+  color: #e8f0dd;
+  opacity: 0;
+  font-size: 10px;
+  transition:
+    opacity 0.14s,
+    transform 0.2s;
+}
+.boot-key-cue.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.boot-key-cue kbd {
+  font: 11px/1 var(--font-mono);
+  padding: 4px 5px;
+  border: 1px solid #acc29680;
+  border-bottom-width: 2px;
+  border-radius: 3px;
+  background: #3e513163;
+}
+.boot-pointer {
+  --pointer-time: 700ms;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 30px;
+  z-index: 12;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 2px #0005);
+  transform: translate3d(72vw, 65vh, 0);
+  transition:
+    transform var(--pointer-time) cubic-bezier(0.22, 0.72, 0.25, 1),
+    opacity 0.15s;
+}
+.boot-pointer svg {
+  position: relative;
+  z-index: 1;
+}
+.boot-pointer.is-keyboard {
+  opacity: 0;
+}
+.boot-pointer > i {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 6px;
+  height: 6px;
+  border: 1px solid #d9efc1;
+  border-radius: 50%;
+  opacity: 0;
+}
+.boot-pointer-click > i {
+  animation: boot-click-ring 500ms ease-out both;
+}
+
+/* Fade out the desktop, then mount the original page normally (no hidden GPU surfaces). */
+.boot-intro-leaving {
+  pointer-events: none;
+  animation: boot-desktop-away 850ms ease-in both;
+}
+@keyframes boot-desktop-in {
+  from {
+    opacity: 0;
+    transform: scale(1.018);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes boot-start-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 28px) scale(0.975);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+@keyframes boot-start-out {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, 25px) scale(0.98);
+  }
+}
+@keyframes boot-terminal-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 15px)) scale(0.972);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes boot-key-tap {
+  50% {
+    transform: scale(0.86);
+  }
+}
+@keyframes boot-caret {
+  0%,
+  48% {
+    opacity: 1;
+  }
+  49%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes boot-print {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes boot-click-ring {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  18% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(8);
+  }
+}
+@keyframes boot-local-click {
+  0% {
+    background: #c4e79b3d;
+    border-color: #c9eb9a;
+  }
+  100% {
+    background: #c4e79b00;
+    border-color: #c9eb9a00;
+  }
+}
+@keyframes boot-desktop-away {
+  0%,
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .boot-taskbar-widgets {
+    display: none;
+  }
+  .boot-wallpaper-signature {
+    display: none;
+  }
+  .boot-terminal {
+    width: calc(100% - 64px);
+  }
+  .boot-key-cue {
+    left: auto;
+    right: 29px;
+    transform: translateY(8px);
+  }
+  .boot-key-cue.is-visible {
+    transform: translateY(0);
+  }
+  .boot-system-tray {
+    gap: 8px;
+  }
+  .boot-system-tray > svg:first-child {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .boot-wallpaper {
+    object-position: 58% center;
+  }
+  .boot-topline {
+    top: 14px;
+    left: 14px;
+    right: 14px;
+  }
+  .boot-workspace-label {
+    padding: 7px 9px;
+    gap: 7px;
+  }
+  .boot-workspace-label > svg {
+    width: 17px;
+  }
+  .boot-workspace-label > span {
+    font-size: 7px;
+    letter-spacing: 0.055em;
+  }
+  .boot-workspace-label small {
+    font-size: 6px;
+  }
+  .boot-skip {
+    min-height: 36px;
+    font-size: 10px;
+    padding: 7px 10px;
+    gap: 7px;
+  }
+  .boot-skip kbd {
+    display: none;
+  }
+  .boot-desktop-icons {
+    left: 15px;
+    top: 84px;
+    gap: 20px;
+  }
+  .boot-desktop-icon {
+    font-size: 9px;
+    width: 57px;
+    gap: 5px;
+  }
+  .boot-desktop-icon svg {
+    width: 27px;
+  }
+  .boot-caption {
+    left: 14px;
+    bottom: 80px;
+    width: min(269px, calc(100% - 28px));
+    padding: 9px 11px 8px;
+  }
+  .boot-caption > div:first-child {
+    gap: 11px;
+  }
+  .boot-caption > div:first-child > span:last-child {
+    font-size: 9px;
+  }
+  .boot-progress {
+    margin-top: 8px;
+  }
+  .boot-key-cue {
+    bottom: 133px;
+    right: 15px;
+    height: 30px;
+    font-size: 9px;
+    padding: 0 10px;
+  }
+  .boot-key-cue kbd {
+    font-size: 9px;
+  }
+  .boot-taskbar {
+    height: 53px;
+    padding: 0 12px;
+  }
+  .boot-taskbar-apps {
+    left: 14px;
+    transform: none;
+    gap: 3px;
+    height: 43px;
+  }
+  .boot-taskbar-apps > span {
+    width: 35px;
+    height: 40px;
+  }
+  .boot-taskbar-apps > .boot-taskbar-search {
+    width: 35px;
+    height: 36px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    border: 0;
+    background: none;
+  }
+  .boot-taskbar-search > span {
+    display: none;
+  }
+  .boot-taskbar-apps .boot-app-icon {
+    width: 30px;
+  }
+  .boot-taskbar-apps .boot-app-icon > svg {
+    width: 26px;
+  }
+  .boot-taskbar-start > svg {
+    width: 22px;
+  }
+  .boot-system-tray > svg {
+    display: none;
+  }
+  .boot-system-tray > span:not(.boot-show-desktop) {
+    font-size: 9px;
+  }
+  .boot-show-desktop {
+    height: 29px;
+  }
+  .boot-start-menu {
+    bottom: 66px;
+    width: calc(100% - 28px);
+    height: min(474px, calc(100svh - 144px));
+    padding: 21px 18px 0;
+  }
+  .boot-search-field {
+    height: 39px;
+    font-size: 11px;
+    gap: 9px;
+    padding: 0 11px;
+  }
+  .boot-search-field > span {
+    font-size: 11px;
+  }
+  .boot-pinned-title {
+    margin-top: 23px;
+  }
+  .boot-pinned-grid {
+    gap: 21px 5px;
+  }
+  .boot-pinned-app > span:last-child {
+    font-size: 8px;
+    white-space: normal;
+  }
+  .boot-pinned-app > img {
+    width: 28px;
+  }
+  .boot-recommended-title {
+    margin-top: 26px;
+  }
+  .boot-recommended {
+    grid-template-columns: 29px 1fr;
+    gap: 10px;
+  }
+  .boot-recommended > svg,
+  .boot-recommended > span:last-child {
+    display: none;
+  }
+  .boot-recommended strong {
+    font-size: 10px;
+  }
+  .boot-start-footer {
+    margin-left: -18px;
+    margin-right: -18px;
+    padding: 0 27px;
+    height: 56px;
+  }
+  .boot-search-results {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .boot-command-preview {
+    display: none;
+  }
+  .boot-command-result {
+    padding: 14px;
+    gap: 14px;
+    min-height: 76px;
+  }
+  .boot-command-result b {
+    font-size: 12px;
+  }
+  .boot-search-filters {
+    gap: 22px;
+    margin-top: 22px;
+  }
+  .boot-search-filters > span {
+    font-size: 10px;
+  }
+  .boot-terminal {
+    width: calc(100% - 28px);
+    border-radius: 7px;
+  }
+  .boot-terminal-titlebar {
+    height: 33px;
+    font-size: 10px;
+    padding-left: 11px;
+  }
+  .boot-terminal-titlebar > div > svg {
+    padding: 0 10px;
+    width: 12px;
+  }
+  .boot-terminal-body {
+    padding: 16px 15px;
+    font-size: 11px;
+    line-height: 1.7;
+  }
+  .boot-command-banner {
+    font-size: 9px;
+    margin-bottom: 16px;
+    line-height: 1.65;
+  }
+  .boot-command-line {
+    min-height: 20px;
+    margin-top: 4px;
+  }
+  .boot-text-caret {
+    width: 6px;
+    height: 12px;
+  }
+  .boot-npm-output {
+    margin-top: 13px;
+  }
+  .boot-vite-ready {
+    margin-top: 19px;
+    padding-left: 0;
+    gap: 6px;
+  }
+  .boot-vite-ready > b {
+    font-size: 10px;
+  }
+  .boot-ready-time {
+    padding-left: 3px;
+    font-size: 10px;
+  }
+  .boot-server-addresses {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+  .boot-server-addresses > div {
+    gap: 8px;
+    min-height: 24px;
+  }
+  .boot-terminal-help {
+    margin-left: 0;
+    font-size: 10px;
+  }
+  .boot-terminal-status {
+    height: 24px;
+    padding: 0 11px;
+    font-size: 7px;
+  }
+  .boot-terminal-status > span {
+    gap: 5px;
+  }
+  .boot-pointer,
+  .boot-pointer > svg {
+    width: 21px;
+    height: 26px;
+  }
+}
+@media (max-width: 380px) and (max-height: 700px) {
+  .boot-terminal-body {
+    padding: 13px 13px;
+    font-size: 10.5px;
+  }
+  .boot-command-banner {
+    margin-bottom: 12px;
+  }
+  .boot-npm-output {
+    margin-top: 11px;
+  }
+  .boot-vite-ready {
+    margin-top: 15px;
+  }
+  .boot-server-addresses {
+    margin-top: 12px;
+  }
+  .boot-network-line {
+    display: none !important;
+  }
+}
+@media (max-height: 520px) and (min-width: 601px) {
+  .boot-topline {
+    top: 10px;
+    left: 15px;
+    right: 15px;
+  }
+  .boot-workspace-label {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .boot-skip {
+    min-height: 32px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .boot-taskbar {
+    height: 44px;
+  }
+  .boot-taskbar-apps {
+    top: 1px;
+    height: 40px;
+  }
+  .boot-taskbar-apps > span {
+    height: 39px;
+  }
+  .boot-start-menu {
+    bottom: 52px;
+    height: calc(100svh - 108px);
+    padding-top: 14px;
+  }
+  .boot-pinned-grid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+  .boot-pinned-app > span:last-child {
+    font-size: 8px;
+    white-space: normal;
+  }
+  .boot-pinned-title {
+    margin: 13px 0;
+  }
+  .boot-recommended,
+  .boot-recommended-title,
+  .boot-command-preview > p {
+    display: none;
+  }
+  .boot-start-footer {
+    height: 37px;
+  }
+  .boot-search-filters {
+    margin-top: 11px;
+    margin-bottom: 8px;
+  }
+  .boot-search-results {
+    padding-bottom: 8px;
+  }
+  .boot-command-preview {
+    padding: 12px;
+  }
+  .boot-command-preview > .boot-cmd-icon {
+    transform: none;
+    margin: 0 0 8px;
+  }
+  .boot-command-preview > small {
+    margin-bottom: 6px;
+  }
+  .boot-command-preview > div {
+    padding-top: 7px;
+  }
+  .boot-terminal {
+    height: calc(100svh - 139px);
+    top: calc(50% - 8px);
+  }
+  .boot-terminal-titlebar {
+    height: 28px;
+  }
+  .boot-terminal-body {
+    padding: 10px 20px;
+    font-size: 10px;
+    line-height: 1.35;
+  }
+  .boot-command-banner {
+    display: none;
+  }
+  .boot-command-line {
+    min-height: 14px;
+    margin-top: 2px;
+  }
+  .boot-npm-output {
+    margin-top: 7px;
+    line-height: 1.4;
+  }
+  .boot-vite-ready {
+    margin-top: 9px;
+  }
+  .boot-vite-ready > b,
+  .boot-ready-time {
+    font-size: 10px;
+  }
+  .boot-server-addresses {
+    margin-top: 8px;
+  }
+  .boot-server-addresses > div {
+    min-height: 15px;
+  }
+  .boot-terminal-help {
+    font-size: 9px;
+    margin-top: 4px;
+  }
+  .boot-terminal-status {
+    display: none;
+  }
+  .boot-caption {
+    bottom: 56px;
+    padding: 7px 11px;
+    left: 17px;
+  }
+  .boot-progress {
+    margin-top: 5px;
+  }
+  .boot-key-cue {
+    bottom: 59px;
+    height: 29px;
+  }
+  .boot-wallpaper-signature {
+    display: none;
+  }
+}
+
+/* Let the small-screen Start panel own its space; don't cover its account row. */
+@media (max-width: 900px) {
+  .boot-intro[data-phase="start"] .boot-caption,
+  .boot-intro[data-phase="search"] .boot-caption {
+    opacity: 0;
+  }
+}
+@media (min-width: 381px) and (max-width: 600px) {
+  .boot-terminal-body {
+    font-size: 12px;
+  }
+  .boot-command-banner {
+    font-size: 10px;
+  }
+}

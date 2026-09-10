@@ -1,0 +1,17 @@
+{
+  "errors": [],
+  "firstReadyMovieTimeMs": 0,
+  "realTimePhases": [
+    "studio",
+    "zoom",
+    "editor",
+    "terminal",
+    "directory",
+    "command",
+    "server",
+    "link",
+    "opening"
+  ],
+  "offline": "Real-time live 3D scene, camera zoom, integrated terminal, automatic handoff, and original interactive hero passed without networking.",
+  "opaqueIframe": "Live WebGL studio, embedded monitor textures, VS Code terminal and automatic portfolio handoff passed in a script-only opaque-origin iframe."
+}

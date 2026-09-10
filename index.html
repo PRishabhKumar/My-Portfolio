@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f4ee" />
+    <script>
+      (() => {
+        let saved;
+        try {
+          saved = localStorage.getItem("rishabh-theme");
+        } catch (_) {}
+        const theme =
+          saved === "dark" || saved === "light"
+            ? saved
+            : matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        document.querySelector('meta[name="theme-color"]').content =
+          theme === "dark" ? "#151914" : "#f5f4ee";
+        const query = new URLSearchParams(location.search);
+        if (
+          !query.has("artwork") &&
+          query.get("intro") !== "skip" &&
+          !matchMedia("(prefers-reduced-motion: reduce)").matches
+        ) {
+          document.documentElement.dataset.bootPending = "true";
+          document.querySelector('meta[name="theme-color"]').content =
+            "#111a14";
+          const wallpaper = document.createElement("link");
+          wallpaper.rel = "preload";
+          wallpaper.as = "image";
+          wallpaper.href = "/images/desktop-wallpaper.webp";
+          document.head.appendChild(wallpaper);
+        }
+      })();
+    </script>
+    <style>
+      html[data-boot-pending="true"] body {
+        background: #111a14;
+      }
+      html[data-boot-pending="true"] #root:empty::before {
+        content: "RISHABH’S WORKSPACE";
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        color: #cbdcbd;
+        font: 10px monospace;
+        letter-spacing: 0.2em;
+      }
+    </style>
+    <meta
+      name="description"
+      content="P Rishabh Kumar — full-stack developer and Computer Science student at VIT Vellore. Thoughtful web experiences, practical AI, and real-time systems."
+    />
+    <meta
+      property="og:title"
+      content="Rishabh Kumar — Built with logic. Made to matter."
+    />
+    <meta
+      property="og:description"
+      content="Explore my work in full-stack development, AI-powered applications, and real-time systems."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="preload"
+      href="/fonts/manrope-700-normal.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/instrument-serif-400-italic.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <title>Rishabh Kumar — Developer & Curious Mind</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript
+      >This portfolio needs JavaScript. You can reach Rishabh at
+      rishabh260405@gmail.com or download the resume at
+      /Rishabh-Kumar-Resume.pdf.</noscript
+    >
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

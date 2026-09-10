@@ -1,0 +1,6 @@
+Planetary textures: Solar System Scope, https://www.solarsystemscope.com/textures/ — CC BY 4.0.
+Regional imagery: Sentinel-2 cloudless - https://s2maps.eu by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2016 & 2017) — CC BY 4.0.
+Regional imagery is a historical, cloudless mosaic, not live imagery.
+License: https://creativecommons.org/licenses/by/4.0/
+Gate photo supplied by the user; converted to WebP without content edits.
+See sources.json for individual source URLs and modifications.

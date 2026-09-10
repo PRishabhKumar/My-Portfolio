@@ -1,0 +1,3 @@
+Visual Studio Code mark
+Source: https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg
+Devicon: https://github.com/devicons/devicon (MIT). The Visual Studio Code name and mark belong to Microsoft. Used to identify the editor in the simulated intro.

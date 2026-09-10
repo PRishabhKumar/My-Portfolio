@@ -1,0 +1,75 @@
+{
+  "errors": [],
+  "results": [
+    {
+      "theme": "light",
+      "group": "Frontend",
+      "logos": 8,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "group": "Backend",
+      "logos": 7,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "group": "AI & automation",
+      "logos": 6,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "group": "Cloud & tools",
+      "logos": 7,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "group": "Languages",
+      "logos": 6,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "group": "Frontend",
+      "logos": 8,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "group": "Backend",
+      "logos": 7,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "group": "AI & automation",
+      "logos": 6,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "group": "Cloud & tools",
+      "logos": 7,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "group": "Languages",
+      "logos": 6,
+      "violations": []
+    }
+  ],
+  "imageLayout": {
+    "workspace": 248,
+    "videos": 248,
+    "chat": 248,
+    "photos": true,
+    "controlsBottom": 372,
+    "windowHeight": 372
+  },
+  "approvedProjectImages": "Other four previews are byte-for-byte unchanged.",
+  "cursor": "One cursor layer with an element-fitted contour; no labels or legacy pointer."
+}

@@ -1,0 +1,56 @@
+{
+  "errors": [],
+  "measurements": [
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "missingImages": []
+    },
+    {
+      "width": 375,
+      "scrollWidth": 375,
+      "missingImages": []
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "missingImages": []
+    },
+    {
+      "width": 430,
+      "scrollWidth": 430,
+      "missingImages": []
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "missingImages": []
+    },
+    {
+      "width": 850,
+      "scrollWidth": 850,
+      "missingImages": []
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "missingImages": []
+    },
+    {
+      "width": 1280,
+      "scrollWidth": 1280,
+      "missingImages": []
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "missingImages": []
+    },
+    {
+      "width": 1920,
+      "scrollWidth": 1920,
+      "missingImages": []
+    }
+  ],
+  "passed": "Project filters, modal navigation and Escape, toolkit keyboard navigation, accordion, clipboard, resume download, mobile menu, mobile modal, responsive overflow checks."
+}

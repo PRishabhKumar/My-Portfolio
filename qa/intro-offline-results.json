@@ -1,0 +1,6 @@
+{
+  "errors": [],
+  "offline": "Full automatic desktop-to-portfolio sequence, local wallpaper, actual 3D hero, and theme switching passed.",
+  "sandbox": "Full sequence and real 3D controls passed in an opaque-origin, script-only iframe with networking disabled.",
+  "navigation": "No localhost navigation or popup windows."
+}

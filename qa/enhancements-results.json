@@ -1,0 +1,66 @@
+{
+  "errors": [],
+  "cursor": "One ball cursor with element-fitted frames and dotted circular outlines. Native cursor suppressed across every DOM element and dialog backdrop. Tracks accurately, morphs on hover, and hides for keyboard/touch.",
+  "theme": "Toggle, saved preference, system default, both modal and mobile-menu themes, and touch operation passed.",
+  "motion": "Masked headings, cursor hover feedback, pointer accuracy, and animated dialog exit passed.",
+  "viewports": [
+    {
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "width": 375,
+      "scrollWidth": 375
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "width": 430,
+      "scrollWidth": 430
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "width": 850,
+      "scrollWidth": 850
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024
+    },
+    {
+      "width": 1280,
+      "scrollWidth": 1280
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "width": 1920,
+      "scrollWidth": 1920
+    }
+  ],
+  "accessibility": [
+    {
+      "name": "Dark desktop",
+      "violations": []
+    },
+    {
+      "name": "Dark project dialog",
+      "violations": []
+    },
+    {
+      "name": "Dark mobile",
+      "violations": []
+    },
+    {
+      "name": "Dark mobile menu",
+      "violations": []
+    }
+  ]
+}

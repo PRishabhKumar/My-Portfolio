@@ -1,0 +1,4 @@
+{
+  "touch": "Horizontal touch manipulation and vertical native page scrolling passed; no fake pointer on touch.",
+  "fallback": "With WebGL disabled, the hero falls back to its illustration and skill cards remain functional. No uncaught exceptions."
+}
