@@ -62,7 +62,7 @@ The default output is `../Rishabh-Portfolio.html`. You can pass a different outp
 | `src/immersive.css` | Responsive 3D stages, inspector, controls, and focus states |
 | `src/ThemeToggle.jsx` | Theme state, system preferences, persistence, and animated eclipse toggle |
 | `src/MotionDesign.jsx` | Masked heading lines, magnetic controls, scroll parallax, and sliding filter plate |
-| `public/Rishabh-Kumar-Resume.pdf` | Replace this to update the downloadable resume |
+| `public/Rishabh's resume.pdf` | Replace this to update the downloadable resume |
 | `public/images/` | Hero and project imagery |
 | `index.html` | Page title, SEO description, theme color, and social metadata |
 

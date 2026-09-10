@@ -74,7 +74,7 @@ assert.equal(
 const downloadPromise = page.waitForEvent("download");
 await page.getByRole("link", { name: "Download résumé", exact: true }).click();
 const download = await downloadPromise;
-assert.equal(download.suggestedFilename(), "Rishabh-Kumar-Resume.pdf");
+assert.equal(download.suggestedFilename(), "Rishabh's resume.pdf");
 const measurements = [];
 for (const width of [320, 375, 390, 430, 768, 850, 1024, 1280, 1440, 1920]) {
   await page.setViewportSize({ width, height: 900 });

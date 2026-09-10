@@ -254,7 +254,7 @@ function Header({ active, scrolled, theme, onToggleTheme }) {
             <a
               className="mobile-resume"
               href={profile.resume}
-              download="Rishabh-Kumar-Resume.pdf"
+              download="Rishabh's resume.pdf"
               onClick={() => setMenuOpen(false)}
             >
               Download resume <Download size={18} />
@@ -303,7 +303,7 @@ function Hero() {
             <a
               className="resume-link"
               href={profile.resume}
-              download="Rishabh-Kumar-Resume.pdf"
+              download="Rishabh's resume.pdf"
             >
               Download résumé <Download size={17} />
             </a>
